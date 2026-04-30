@@ -7,3 +7,7 @@ let moveDelay = 6
 
 let foodX; 
 let foodY;
+let gridMap = [];
+let cols, rows; 
+let wasteCount = 0;
+let currenMode = "menu";
