@@ -65,8 +65,20 @@ function draw() {
 }
 function playGame() {
     if (frameCount % moveDelay === 0) {
-        gameLogic();
+        gameLogic(); }
+drawPhone( foodX, foodY); 
+drawSmilleyface(x,y);
+for(let r= 0; r <rows; r++) {
+    for (let c= 0; c< cols; c++) {
+        if (gridMap [r] [c] === 1) {
+            drawScrap(c*size, r*size);
+        }
+    }
 }
-function drawPhone( foodX, foodY) {
+function gameLogic() {
+    let oldX = x; 
+    let oldY = y; 
 }
+let nextX = x + 
+
 }
