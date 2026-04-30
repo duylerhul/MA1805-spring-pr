@@ -16,8 +16,14 @@ function drawSmilleyface(sx,sy) {
  fill('yellow'); 
  circle (sx + 10, sy + 10, 20);
  fill('black');
- circle (sx + 7, sy + 8, 3);
+ circle(sx + 7, sy + 8, 3);
+ cirlce(sx + 13, sy +8, 3);
+noFill();
+stroke('black');
+arc( sx + 10, sy + 12, 10,0,3.14);
+noStroke();
 }
+
 
 
 
