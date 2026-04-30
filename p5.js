@@ -19,3 +19,11 @@ function setup() [
     initGrid(); 
     pickFood();
 ]
+
+function draw() {
+    background(135,206,235);
+    if (currentMode === "menu") [
+        showMenu();
+        else if (currentMode === "game") {playGame}
+    ]
+}
