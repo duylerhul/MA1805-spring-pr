@@ -79,6 +79,14 @@ function gameLogic() {
     let oldX = x; 
     let oldY = y; 
 }
-let nextX = x + 
+let nextX = x + (speedX * size);
+let nextY = y + (speedY * size);
 
+let gridX = floor (nextX / size);
+let gridY = floor (nextY / size);
+
+if (nextX < 0 || nextX >= width || nextY < 0 || nextY >= height) { 
+    resetGame(); 
+    return; 
+}
 }
