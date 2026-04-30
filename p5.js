@@ -16,7 +16,7 @@ function drawSmilleyface(sx,sy) {
  fill('yellow'); 
  circle (sx + 10, sy + 10, 20);
  fill('black');
- circle (sx + 5, sy + 5, 5);
+ circle (sx + 7, sy + 8, 3);
 }
 
 
