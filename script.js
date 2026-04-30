@@ -10,7 +10,7 @@ let foodY;
 let gridMap = [];
 let cols, rows; 
 let wasteCount = 0;
-let currenMode = "menu";
+let currentMode = "menu";
 let shakeAmount = 0;
 function drawSmilleyface(sx,sy) {
  fill('yellow'); 
@@ -43,28 +43,27 @@ function drawScrap(wx, wy){
 
 
 
-function setup() [
+function setup() {
     createCanvas(400, 400);
     cols = floor( width / size); 
     rows = floor( height/ size); 
     initGrid(); 
     pickFood();
-]
+}
 
 function draw() {
     background(135,206,235);
     if (currentMode === "menu") 
         showMenu();
     else if (currentMode === "game") {
-        else if (currentMode === "game") {
-            playGame();
+        playGame();
     }
     if (shakeAmount > 0) { 
         translate (random(-5,5) , random(-5,5));
         shakeAmount = shakeAmount -1;
     }
 }
-function playGame() 
+function playGame() {
     if (frameCount % moveDelay === 0) {
         gameLogic();
 }
