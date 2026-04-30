@@ -12,6 +12,15 @@ let cols, rows;
 let wasteCount = 0;
 let currenMode = "menu";
 let shakeAmount = 0;
+function drawSmilleyface(sx,sy) {
+ fill('yellow'); 
+ circle (sx + 10, sy + 10, 20);
+ fill('black');
+ circle (sx + 5, sy + 5, 5);
+}
+
+
+
 function setup() [
     createCanvas(400, 400);
     cols = floor( width / size); 
@@ -32,4 +41,11 @@ function draw() {
         translate (random(-5,5) , random(-5,5));
         shakeAmount = shakeAmount -1;
     }
+}
+function playGame() {
+    if (frameCount % moveDelay === 0) {
+        gameLogic();
+}
+function drawPhone( foodX, foodY) {
+
 }
