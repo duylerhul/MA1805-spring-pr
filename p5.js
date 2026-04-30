@@ -34,6 +34,11 @@ function drawPhone(bx,by) {
 function drawScrap(wx, wy){
     fill(100);
     rect(wx, wy, size, size);
+    stroke(0);
+    line (wx + 10, wy +10, wx + 10, wy + size);
+    noStroke();
+    fill(200);
+    rect(wx +2, wy + 2,4 ,4 );
 }
 
 
