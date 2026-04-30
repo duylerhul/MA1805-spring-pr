@@ -11,3 +11,11 @@ let gridMap = [];
 let cols, rows; 
 let wasteCount = 0;
 let currenMode = "menu";
+let shakeAmount = 0;
+function setup() [
+    createCanvas(400, 400);
+    cols = floor( width / size); 
+    rows = floor( height/ size); 
+    initGrid(); 
+    pickFood();
+]
