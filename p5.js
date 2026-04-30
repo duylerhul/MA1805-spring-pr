@@ -24,8 +24,12 @@ function draw() {
     background(135,206,235);
     if (currentMode === "menu") 
         showMenu();
-    }
+    else if (currentMode === "game") {
         else if (currentMode === "game") {
             playGame();
+    }
+    if (shakeAmount > 0) { 
+        translate (random(-5,5) , random(-5,5));
+        shakeAmount = shakeAmount -1;
     }
 }
