@@ -25,6 +25,15 @@ noStroke();
 }
 function drawPhone(bx,by) {
     fill(50);
+    rect (bx +4, by +2, 12, 16);
+    fill('skyblue');
+    rect (bx+5, by + 4, 10, 10);
+    fill('white');
+    circle(bx +10, by + 16, 2);
+}
+function drawScrap(wx, wy){
+    fill(100);
+    rect(wx, wy, size, size);
 }
 
 
