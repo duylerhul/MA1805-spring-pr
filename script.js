@@ -89,4 +89,9 @@ if (nextX < 0 || nextX >= width || nextY < 0 || nextY >= height) {
     resetGame(); 
     return; 
 }
+if (gridMap[gridY][gridX] === 1) {
+    resetGame();
+    return; 
+
+    x=
 }
