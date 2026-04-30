@@ -23,7 +23,9 @@ stroke('black');
 arc( sx + 10, sy + 12, 10,0,3.14);
 noStroke();
 }
-
+function drawPhone(bx,by) {
+    fill(50);
+}
 
 
 
