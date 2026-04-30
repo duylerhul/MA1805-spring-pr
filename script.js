@@ -64,10 +64,10 @@ function draw() {
         shakeAmount = shakeAmount -1;
     }
 }
-function playGame() {
+function playGame() 
     if (frameCount % moveDelay === 0) {
         gameLogic();
 }
 function drawPhone( foodX, foodY) {
-
+}
 }
