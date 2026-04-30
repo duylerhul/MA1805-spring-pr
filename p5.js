@@ -22,8 +22,10 @@ function setup() [
 
 function draw() {
     background(135,206,235);
-    if (currentMode === "menu") [
+    if (currentMode === "menu") 
         showMenu();
-        else if (currentMode === "game") {playGame}
-    ]
+    }
+        else if (currentMode === "game") {
+            playGame();
+    }
 }
