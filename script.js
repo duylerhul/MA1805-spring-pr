@@ -120,8 +120,16 @@ function kePressed() {
         if (keyCode === right_arrow) { speedX = 1; speedY = 0;}
         if (keyCode === up_arrow) { speedX = 0; speedY = -1;}
         if (keyCode === down_arrow) { speedX = 0; speedY = 1;}
-    } else if (keyCode === enter) {
+    } else if (keyCode === ENTER) {
         screenMode = 'play';
     }
 }
+function generateGrid( { 
+    for ( let r = 0; r<rows; r++) { 
+        wasteMap[r] = [];
+        for (let c = 0 ; c<cols; c++) {
+            wasteMap[r][c] = 0;
+        }
+    }
+
 }
