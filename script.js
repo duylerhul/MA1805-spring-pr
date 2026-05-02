@@ -40,8 +40,10 @@ function drawScrap(wx, wy){
     fill(200);
     rect(wx +2, wy + 2,4 ,4 );
 }
+let themeSong;
 let eatSound;
 function preLoad() {
+themeSong = loadSound('theme.mp3');
 eatSound = loadSound('eat.mp3');
 }
 
