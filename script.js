@@ -93,6 +93,18 @@ if (gridMap[gridY][gridX] === 1) {
     resetGame();
     return; 
 
-    x=
+    x= nextX
+    y- nextY 
+
+    if (x === foodX && y === foodY){
+        pickFood();
+        let dropC = floor(oldX / size);
+        let dropR= floor(oldY / size);
+        wasteMap[dropR][dropC] = 1;
+        wasteCount++;
+        shakeAmount = 10;
+        if (moveDelay >3) moveDelay--;
+
+    }
 } 
 }
