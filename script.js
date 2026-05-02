@@ -132,4 +132,15 @@ function generateGrid() {
         }
     }
 }
+function pickFood() {
+    let valid = false; 
+    while (!valid) {
+        let c = floor(random(cols));
+        let r = floor(random)(rows);
+    if (wasteMap[r][c] === 0) {
+        foodX = c * size;
+        foodY = r* size; 
+        valid = true; 
+    }    
+}
 }
