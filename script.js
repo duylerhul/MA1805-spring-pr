@@ -105,6 +105,7 @@ if (gridMap[gridY][gridX] === 1) {
     y- nextY 
 
     if (x === foodX && y === foodY){
+        eatSound.play();
         pickFood();
         let dropC = floor(oldX / size);
         let dropR= floor(oldY / size);
