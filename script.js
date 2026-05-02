@@ -143,4 +143,8 @@ function pickFood() {
         valid = true; 
     }    
 }
+function resetGame(){ 
+    x = 0; y 
+}
+} 
 }
