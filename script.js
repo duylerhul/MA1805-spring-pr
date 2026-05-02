@@ -40,8 +40,10 @@ function drawScrap(wx, wy){
     fill(200);
     rect(wx +2, wy + 2,4 ,4 );
 }
-
-
+let eatSound;
+function preLoad() {
+eatSound = loadSound('eat.mp3');
+}
 
 function setup() {
     createCanvas(400, 400);
@@ -144,7 +146,13 @@ function pickFood() {
     }    
 }
 function resetGame(){ 
-    x = 0; y 
+    x = 0; y = 0;
+    speedX = 0; speedY = 0;
+    wasteCount = 0;
+    moveDelay = 0;
+    generateGrid();
+    pickFood();
+    screenMode ="start";
 }
 } 
 }
