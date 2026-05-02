@@ -94,4 +94,5 @@ if (gridMap[gridY][gridX] === 1) {
     return; 
 
     x=
+} 
 }
