@@ -75,6 +75,12 @@ for(let r= 0; r <rows; r++) {
         }
     }
 }
+function drawStarMenu() {
+    fill(50);
+    textAlign(CENTER, CENTER);
+    textsize(12);
+    text 
+}
 function gameLogic() {
     let oldX = x; 
     let oldY = y; 
@@ -107,4 +113,10 @@ if (gridMap[gridY][gridX] === 1) {
 
     }
 } 
+
+function kePressed() {
+    if (screenMode === "play"){
+        if (keyCode === left_arrow) { speedX = -1; speedY = 0;}
+    }
+}
 }
