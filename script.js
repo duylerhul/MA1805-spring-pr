@@ -117,6 +117,11 @@ if (gridMap[gridY][gridX] === 1) {
 function kePressed() {
     if (screenMode === "play"){
         if (keyCode === left_arrow) { speedX = -1; speedY = 0;}
+        if (keyCode === right_arrow) { speedX = 1; speedY = 0;}
+        if (keyCode === up_arrow) { speedX = 0; speedY = -1;}
+        if (keyCode === down_arrow) { speedX = 0; speedY = 1;}
+    } else if (keyCode === enter) {
+        screenMode = 'play';
     }
 }
 }
