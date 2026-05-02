@@ -124,12 +124,12 @@ function kePressed() {
         screenMode = 'play';
     }
 }
-function generateGrid( { 
+function generateGrid() { 
     for ( let r = 0; r<rows; r++) { 
         wasteMap[r] = [];
         for (let c = 0 ; c<cols; c++) {
             wasteMap[r][c] = 0;
         }
     }
-
+}
 }
