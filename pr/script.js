@@ -58,7 +58,7 @@ function setup() {
 function draw() {
     background(135,206,235);
     if (currentMode === "menu") 
-        showMenu();
+        drawStarMenu();
     else if (currentMode === "game") {
         playGame();
     }
@@ -82,13 +82,13 @@ for(let r= 0; r <rows; r++) {
 function drawStarMenu() {
     fill(50);
     textAlign(CENTER, CENTER);
-    textsize(12);
+    textSize(12);
     text 
 }
 function gameLogic() {
     let oldX = x; 
     let oldY = y; 
-}
+
 let nextX = x + (speedX * size);
 let nextY = y + (speedY * size);
 
@@ -117,6 +117,7 @@ if (gridMap[gridY][gridX] === 1) {
         if (moveDelay >3) moveDelay--;
 
     }
+}
 } 
 
 function keyPressed() {
@@ -157,5 +158,5 @@ function resetGame(){
     pickFood();
     screenMode ="start";
 }
-} 
+}
 }
