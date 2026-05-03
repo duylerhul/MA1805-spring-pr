@@ -17,7 +17,7 @@ function drawSmilleyface(sx,sy) {
  circle (sx + 10, sy + 10, 20);
  fill('black');
  circle(sx + 7, sy + 8, 3);
- cirlce(sx + 13, sy +8, 3);
+ circle(sx + 13, sy +8, 3);
 noFill();
 stroke('black');
 arc( sx + 10, sy + 12, 10,0,3.14);
@@ -51,7 +51,7 @@ function setup() {
     createCanvas(400, 400);
     cols = floor( width / size); 
     rows = floor( height/ size); 
-    initGrid(); 
+    generateGrid(); 
     pickFood();
 }
 
@@ -69,7 +69,7 @@ function draw() {
 }
 function playGame() {
     if (frameCount % moveDelay === 0) {
-        gameLogic(); }
+        gameLogic(); 
 drawPhone( foodX, foodY); 
 drawSmilleyface(x,y);
 for(let r= 0; r <rows; r++) {
@@ -79,11 +79,14 @@ for(let r= 0; r <rows; r++) {
         }
     }
 }
+    }
 function drawStarMenu() {
     fill(50);
     textAlign(CENTER, CENTER);
     textSize(12);
-    text 
+    text("E waste snake", width / 2, height / 2 - 20);
+    textSize(10);
+    text("press enter to start", width / 2, height / 2 + 10);
 }
 function gameLogic() {
     let oldX = x; 
@@ -111,7 +114,7 @@ if (gridMap[gridY][gridX] === 1) {
         pickFood();
         let dropC = floor(oldX / size);
         let dropR= floor(oldY / size);
-        wasteMap[dropR][dropC] = 1;
+        gridMap[dropR][dropC] = 1;
         wasteCount++;
         shakeAmount = 10;
         if (moveDelay >3) moveDelay--;
@@ -127,7 +130,7 @@ function keyPressed() {
         if (keyCode === UP_ARROW) { speedX = 0; speedY = -1;}
         if (keyCode === DOWN_ARROW) { speedX = 0; speedY = 1;}
     } else if (keyCode === ENTER) {
-        screenMode = 'play';
+        currentMode = 'play';
     }
 }
 function generateGrid() { 
@@ -156,7 +159,7 @@ function resetGame(){
     moveDelay = 0;
     generateGrid();
     pickFood();
-    screenMode ="start";
+    currentMode = "start";
 }
 }
 }
