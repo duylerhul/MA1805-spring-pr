@@ -21,7 +21,7 @@ function drawSmilleyface(sx,sy) {
  circle(sx + 13, sy +8, 3);
 noFill();
 stroke('black');
-arc( sx + 10, sy + 12, 10,0,3.14);
+arc( sx + 10, sy + 12, 10, 10, 0, 3.14);
 noStroke();
 }
 function drawPhone(bx,by) {
@@ -60,10 +60,11 @@ function draw() {
     background(135,206,235);
     if (currentMode === "menu") {
         drawStarMenu();
-    } else if (currentMode === "game") {
+    } else if (currentMode === "play") {
         playGame();
     }
     if (shakeAmount > 0) { 
+        push();
         translate (random(-5,5) , random(-5,5));
         shakeAmount = shakeAmount -1;
     }
@@ -80,7 +81,7 @@ for(let r= 0; r <rows; r++) {
         }
     }
 }
-
+}
 
 function drawStarMenu() {
     fill(50);
@@ -122,10 +123,10 @@ if (gridMap[gridY][gridX] === 1) {
 
     }
 }
-} 
+
 
 function keyPressed() {
-    if (screenMode === "play"){
+    if (currentMode === "play"){
         if (keyCode === LEFT_ARROW) { speedX = -1; speedY = 0;}
         if (keyCode === RIGHT_ARROW) { speedX = 1; speedY = 0;}
         if (keyCode === UP_ARROW) { speedX = 0; speedY = -1;}
@@ -153,13 +154,14 @@ function pickFood() {
         valid = true; 
     }    
 }
+}
 function resetGame(){ 
     x = 0; y = 0;
     speedX = 0; speedY = 0;
     wasteCount = 0;
-    moveDelay = 0;
+    moveDelay = 5;
     generateGrid();
     pickFood();
-    currentMode = "start";
+    currentMode = "menu";
 }
-}
+
