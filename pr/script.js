@@ -54,6 +54,7 @@ function setup() {
     rows = floor(height / size);
     generateGrid();
     pickFood();
+    themeSong.setVolume(1)
 }
 
 function draw() {
@@ -133,6 +134,9 @@ function keyPressed() {
         if (keyCode === DOWN_ARROW) { speedX = 0; speedY = 1;}
     } else if (keyCode === ENTER) {
         currentMode = 'play';
+    }
+    if (themeSong.isLoaded() && !themeSong.isPlaying()) {
+        themeSong.loop();
     }
 }
 function generateGrid() { 
