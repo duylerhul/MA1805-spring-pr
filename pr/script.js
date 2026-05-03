@@ -119,7 +119,7 @@ if (gridMap[gridY][gridX] === 1) {
     }
 } 
 
-function kePressed() {
+function keyPressed() {
     if (screenMode === "play"){
         if (keyCode === left_arrow) { speedX = -1; speedY = 0;}
         if (keyCode === right_arrow) { speedX = 1; speedY = 0;}
@@ -131,9 +131,9 @@ function kePressed() {
 }
 function generateGrid() { 
     for ( let r = 0; r<rows; r++) { 
-        wasteMap[r] = [];
+        gridMap[r] = [];
         for (let c = 0 ; c<cols; c++) {
-            wasteMap[r][c] = 0;
+            gridMap[r][c] = 0;
         }
     }
 }
@@ -141,8 +141,8 @@ function pickFood() {
     let valid = false; 
     while (!valid) {
         let c = floor(random(cols));
-        let r = floor(random)(rows);
-    if (wasteMap[r][c] === 0) {
+        let r = floor(random(rows));
+    if (gridMap[r][c] === 0) {
         foodX = c * size;
         foodY = r* size; 
         valid = true; 
