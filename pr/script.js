@@ -54,7 +54,7 @@ function setup() {
     rows = floor(height / size);
     generateGrid();
     pickFood();
-    themeSong.setVolume(1)
+    themeSong.setVolume(0.5)
 }
 
 function draw() {
