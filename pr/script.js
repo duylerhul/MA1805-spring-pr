@@ -1,4 +1,4 @@
-let x = 0; // 
+let x = 0; 
 let y= 0;
 let size = 20;
 let speedX= 0;
@@ -12,6 +12,7 @@ let cols, rows;
 let wasteCount = 0;
 let currentMode = "menu";
 let shakeAmount = 0;
+
 function drawSmilleyface(sx,sy) {
  fill('yellow'); 
  circle (sx + 10, sy + 10, 20);
@@ -49,17 +50,17 @@ eatSound = loadSound('eat.wav');
 
 function setup() {
     createCanvas(400, 400);
-    cols = floor( width / size); 
-    rows = floor( height/ size); 
-    generateGrid(); 
+    cols = floor(width / size);
+    rows = floor(height / size);
+    generateGrid();
     pickFood();
 }
 
 function draw() {
     background(135,206,235);
-    if (currentMode === "menu") 
+    if (currentMode === "menu") {
         drawStarMenu();
-    else if (currentMode === "game") {
+    } else if (currentMode === "game") {
         playGame();
     }
     if (shakeAmount > 0) { 
@@ -69,7 +70,7 @@ function draw() {
 }
 function playGame() {
     if (frameCount % moveDelay === 0) {
-        gameLogic(); 
+        gameLogic(); }
 drawPhone( foodX, foodY); 
 drawSmilleyface(x,y);
 for(let r= 0; r <rows; r++) {
@@ -79,7 +80,8 @@ for(let r= 0; r <rows; r++) {
         }
     }
 }
-    }
+
+
 function drawStarMenu() {
     fill(50);
     textAlign(CENTER, CENTER);
@@ -95,19 +97,18 @@ function gameLogic() {
 let nextX = x + (speedX * size);
 let nextY = y + (speedY * size);
 
-let gridX = floor (nextX / size);
-let gridY = floor (nextY / size);
-
 if (nextX < 0 || nextX >= width || nextY < 0 || nextY >= height) { 
     resetGame(); 
     return; 
 }
+let gridX = floor (nextX / size);
+let gridY = floor (nextY / size);
 if (gridMap[gridY][gridX] === 1) {
     resetGame();
     return; 
-
+}
     x= nextX
-    y- nextY 
+    y= nextY 
 
     if (x === foodX && y === foodY){
         eatSound.play();
@@ -160,6 +161,5 @@ function resetGame(){
     generateGrid();
     pickFood();
     currentMode = "start";
-}
 }
 }
