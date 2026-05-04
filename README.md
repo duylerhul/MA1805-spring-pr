@@ -23,10 +23,13 @@ Challenges: Throughout the process I faced significant challenges that required 
 
 
 Resources that help me to complete the project: 
+
 All the props are being drawn by me using draw function 
+
 Sound effect: 
 - https://www.bfxr.net/
 - https://5ercine-free-cafe-radio.itch.io/colorful-lo-fi-hip-hop-pastel-window-free-cafe-radio-free-download-royalty-fr
+
 Resource for some of the code that I use and learn from: 
 -	https://hughdeleuzer.notion.site/Front-Page-Coding-for-the-Arts-Spring-Term-2025-181c92fdf1c68004ade8ec279393d0bf
 -	https://www.youtube.com/watch?v=r5Iy3v1co0A&t=135s
