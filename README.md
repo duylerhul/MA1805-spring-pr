@@ -1,8 +1,11 @@
 Final project report: 
 
 Author: Duy le 
+
 Role: lead developer, designer 
+
 Github repository:  https://github.com/duylerhul/MA1805-spring-pr/edit/main/README.md
+
 Live site: https://duylerhul.github.io/MA1805-spring-pr/ 
 
 introduction: 
